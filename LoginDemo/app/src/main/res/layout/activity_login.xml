@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/background2">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/user"
+        android:drawableLeft="@drawable/yonghu"
+        android:hint="用户名"
+        android:paddingLeft="5dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/user"
+        android:drawableLeft="@drawable/mima"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:textSize="20sp"
+        android:background="@drawable/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <CheckBox
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/remember"
+        android:layout_marginLeft="5dp"
+        android:text="记住登录信息"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textColor="#FF4040"
+        android:background="@drawable/reg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintBaseline_toBaselineOf="@+id/remember"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
